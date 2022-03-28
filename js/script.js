@@ -5,22 +5,29 @@ const fizzbuzz = "FizzBuzz";
 
 for(let i = 1; i<=100; i++){
     const numero = document.createElement("div");
+    numero.classList.add("col");
     numero.innerHTML = `
-        il numero ${i}
+        <p>${i} </p>
     `;
-    if(i %3 ===0 && i %5 ===0){
+    if(i %3 ===0 && i %5 ===0)
+    {
         numero.innerHTML = `
-        il numero ${fizzbuzz}
+        <p>${fizzbuzz}</p>
     `;
-    } else if(i %5 === 0){
+    numero.classList.add("pink");
+    } else if(i %5 === 0)
+    {
         numero.innerHTML = `
-        il numero ${buzz}
-    `;} else if(i %3 ===0){
-        numero.innerHTML = `
-        il numero ${fizz}
+        <p>${buzz}</p>
     `;
+    numero.classList.add("yellow");
+    } else if(i %3 ===0)
+    {
+        numero.innerHTML = `
+        <p>${fizz}</p>
+    `;
+    numero.classList.add("green");
     }
     
     numeri.append(numero)
-    console.log(i)
 }
